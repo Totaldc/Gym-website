@@ -1,0 +1,10 @@
+.logo{
+    position: absolute;
+    top:500px;
+}
+
+.logo-sec{
+    position: relative;
+    background-color: black;
+}
+
