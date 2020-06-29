@@ -3,22 +3,22 @@
 
 function make_return()
 {
-    switch($_GET['section']){
+    switch ($_GET['section']) {
         case 'gallery':
             include_once 'app/Views/gallery.php';
-        break;
+            break;
         case 'offers':
             include_once 'app/Views/offers.php';
-        break;
+            break;
         case 'staff':
             include_once 'app/Views/staff.php';
-        break;
+            break;
         case 'shedule':
             include_once 'app/Views/shedule.php';
-        break;
+            break;
         case 'contacts':
             include_once 'app/Views/contacts.php';
-        break;
+            break;
         default:
             include_once 'app/Views/main.php';
     }
@@ -31,6 +31,7 @@ function make_page()
     include_once 'app/Views/layout/header.php';
     make_menu($db);
     make_return();
+    make_main($db);
     include_once 'app/Views/layout/footer.php';
 }
 
@@ -44,3 +45,9 @@ function make_menu($array) //makes nav bar from db
 }
 
 
+function make_main($array)
+{
+    print '<section>';
+    print 'VALIO';
+    print '</section>';
+}
