@@ -101,22 +101,24 @@ $db = [
 
 
     'offers' => [
-        'offer_title' => '',
-        'offer_price' => '',
-        'offer_summary' => '',
+        'title' => 'Smart',
+        'price' => '28Eur',
+        'summary' => '3.5h/day',
     ],
     [
-        'offer_title' => '',
-        'offer_price' => '',
-        'offer_summary' => '',
+        'title' => 'Flexi',
+        'price' => '49Eur',
+        'summary' => 'Unlimited',
     ],
-    [
-        'offer_title' => '',
-        'offer_price' => '',
-        'offer_summary' => '',
+ 
+    'workouts' =>[
+
+        'workout_title' => 'Zumba',
+        'workout_lenght' => 68,
+        'people_count' => 15,
+        'coach_id' => 1,
+        'weekday' => [1, 3, 4],
+
     ],
-
-
-
 
 ];

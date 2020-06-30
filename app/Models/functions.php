@@ -155,3 +155,10 @@ function make_staff_cards($array)
     }
     print '</div>';
 }
+
+
+function make_offer($array){
+    foreach($array['offers'] as $key => $offer){
+       print $offer['offer_title'];
+}
+}
