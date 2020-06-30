@@ -39,11 +39,17 @@ function make_page()
 
 function make_menu($array) //makes nav bar from db
 {
+    print '<div class="container d-flex justify-content-around bg-dark">';
+    print '<div class="">';
+    print '<img src="https://www.impuls.lt/images/logo_white.png" alt="logo">';
+    print '</div>';
+    print '<div>';
     print '<form method="get">';
     foreach ($array['menu'] as $nav_button) {
         print '<a href="?section=' . $nav_button['slug'] . '">' . $nav_button['name'] . '</a>';
     }
     print '</form>';
+    print '</div>';
 }
 
 
@@ -99,7 +105,7 @@ function make_cards()
 {
     print '<div class="card-group">';
     print '<div class="card">';
-    print '<img src="..." class="card-img-top" alt="...">';
+    print '<img src="assets\images\icons/add-user-3-24.png" class="card-img-top" width="100px" height="100px" alt="...">';
     print '<div class="card-body">';
     print '<h5 class="card-title">Card title</h5>';
     print '<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>';
@@ -107,7 +113,7 @@ function make_cards()
     print '</div>';
     print '</div>';
     print '<div class="card">';
-    print '<img src="..." class="card-img-top" alt="...">';
+    print '<img src="assets\images\icons/medal-3-24.png" class="card-img-top" width="100px" height="100px" alt="...">';
     print '<div class="card-body">';
     print '<h5 class="card-title">Card title</h5>';
     print '<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>';
