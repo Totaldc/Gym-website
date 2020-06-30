@@ -19,8 +19,8 @@ include_once 'app/Models/functions.php';
 
 <body>
 
-    <section class="container">
-        <div class="d-flex justify-content-end pt-3">
+    <section class="bg-dark">
+        <div class="d-flex linkas justify-content-end pt-3">
             <?php make_menu($db); ?>
         </div>
     </section>

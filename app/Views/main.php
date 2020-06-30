@@ -1,6 +1,12 @@
+<?php
+
+include_once 'app/Models/functions.php';
+include_once 'app/php/array.php';
+
+
+?>
 
 
 <main>
     <?php make_carousel(); ?>
-    <?php make_cards(); ?>
 </main>

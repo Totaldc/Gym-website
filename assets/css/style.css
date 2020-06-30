@@ -1,10 +1,14 @@
-.logo{
-    position: absolute;
-    top:500px;
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
 }
 
-.logo-sec{
-    position: relative;
-    background-color: black;
+
+.card img{
+    align-items: center;
 }
 
+.card-body{
+    border: none;
+}
