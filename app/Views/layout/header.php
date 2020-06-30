@@ -16,5 +16,6 @@ include_once 'app/Models/functions.php';
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
+    
 <body>
+<?php make_menu($db); ?>

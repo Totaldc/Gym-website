@@ -43,6 +43,7 @@ $db = [
 
     'staff' => [
 
+        [
         'coach_id' => 1,
         'coach_name' => 'Karolis',
         'coach_lastname' => 'Karoliauskas',
@@ -66,6 +67,8 @@ $db = [
 
     ],
 
+],
+
 
     'schedule' => [
 
@@ -88,12 +91,12 @@ $db = [
         'program_id' => 3,
         'program_title' => 'programa1',
         'program_about' => 'metu',
-
+    
 
     ],
 
     'gallery' => [
-        
+
     ],
 
     'contacts' => [
