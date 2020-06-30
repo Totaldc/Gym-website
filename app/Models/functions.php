@@ -33,9 +33,6 @@ function make_page()
     include_once 'app/Views/layout/header.php';
     make_return();
     // make_main($db);
-    print '<section class="container">';
-    make_cards($db);
-    print '</section>';
     include_once 'app/Views/layout/footer.php';
 }
 
@@ -110,12 +107,13 @@ function make_carousel()
 
 function make_cards()
 {
-    print '<div class="card-group d-flex text-center">';
-    print '<div class="card m-5 justify-content-center col-5">';
+    print '<div class="card-group d-flex text-center justify-content-center mt-5 mb-5">';
+
+    print '<div class="card col-5">';
     print '<div>';
-    print '<img src="assets\images\icons/add-user-3-24.png" class="" width="80" height="80px" alt="...">';
+    print '<img src="assets\images\icons/add-user-3-24.png" class="mt-4" width="80" height="80px" alt="...">';
     print '</div>';
-    print '<div class="card-body">';
+    print '<div class="card-body m-5">';
     print '<h5 class="card-title">ĮSIGYKITE
     NARYSTĘ</h5>';
     print '<p class="card-text">Visada geriausi pasiūlymai,
@@ -123,11 +121,13 @@ function make_cards()
     print '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>';
     print '</div>';
     print '</div>';
-    print '<div class="card m-5 justify-content-center col-5">';
+
+
+    print '<div class="card justify-content-center col-5">';
     print '<div>';
-    print '<img src="assets\images\icons/add-user-3-24.png" class="" width="80" height="80px" alt="...">';
+    print '<img src="assets\images\icons/medal-3-24.png" class="mt-4" width="80" height="80px" alt="...">';
     print '</div>';
-    print '<div class="card-body">';
+    print '<div class="card-body m-5">';
     print '<h5 class="card-title">ĮSIGYKITE
     NARYSTĘ</h5>';
     print '<p class="card-text">Visada geriausi pasiūlymai,
@@ -135,24 +135,23 @@ function make_cards()
     print '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>';
     print '</div>';
     print '</div>';
+
     print '</div>';
 }
 
-// function make_cards(){
+function make_staff_cards($array)
+{
 
-//     print '<div class="card-group">';
-//     for($i=0; $i<=1; $i++){
-//         print '<div class="card">';
-//     print '<img src="assets\images\icons/add-user-3-24.png" class="card-img-top" width="100px" height="100px" alt="...">';
-//     print '<div class="card-body">';
-//     print '<h5 class="card-title">ĮSIGYKITE
-//     NARYSTĘ</h5>';
-//     print '<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>';
-//     print '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>';
-//     print '</div>';
-//     print '</div>';
-//     }
-//     print '</div>';
-
-
-// }
+    print '<div class="card-group text-center">';
+    foreach ($array['staff'] as $key => $people) {
+        print '<div class="card m-3 h-50 col-4" style="border:1px solid black">';
+        print '<img height="200px" src="' . $people['coach_img'] .'">';
+        print '<div class="card-body">';
+        print '<h5 class="card-title">' . $people['coach_name'] . ' ' . $people['coach_lastname']  . '</h5>';
+        print '<p class="card-text">' . $people['coatch_bio'] . '</p>';
+        print '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>';
+        print '</div>';
+        print '</div>';
+    }
+    print '</div>';
+}

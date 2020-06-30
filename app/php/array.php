@@ -1,16 +1,7 @@
 <?php
 
 
-// $db = [
 
-// 'menu' => [
-//     'Home' => '1',
-//     'Staff' => '2',
-//     'Workouts' => '3',
-//     'Offers' => '4',
-//     'Gallery' => '5',
-//     'Contacts' => '6',
-// ],
 
 $db = [
     'menu' => [
@@ -45,28 +36,31 @@ $db = [
 
         [
         'coach_id' => 1,
+        'coach_img' => 'https://www.impuls.lt/storage/app/images/2019-02-28/768c2a5de52cf6b940c25f6f52fc8ec9.jpg',
         'coach_name' => 'Karolis',
         'coach_lastname' => 'Karoliauskas',
-        'coatch_birthday' => '',
+        'coatch_bio' => 'MOBILITY, PILATESAS PAŽENGUSIEMS, PILATESAS BEGINNERS, BALL TRAINING, PILATESAS, BODY TONE',
 
     ],
     [
 
         'coach_id' => 2,
+        'coach_img' => 'https://www.impuls.lt/storage/app/images/2017-06-16/902ff83a98bbfb3f14f4b8f1e2f9eb6b.jpg',
         'coach_name' => 'Edvinas',
         'coach_lastname' => 'Edvinauskas',
-        'coatch_birthday' => '',
+        'coatch_bio' => 'PRESS + BACK, BODY TONE, SLOW & STRONG, X-FIT',
 
     ],
     [
 
         'coach_id' => 3,
+        'coach_img' => 'https://www.impuls.lt/storage/app/images/2017-06-16/c1469279b29028b814881ae358c42c2d.jpg',
         'coach_name' => 'Mantas',
         'coach_lastname' => 'Mantauskas',
-        'coatch_birthday' => '',
+        'coatch_bio' => 'TRX BASIC, JOGA, SLOW & STRONG',
 
     ],
-
+    
 ],
 
 
@@ -100,9 +94,9 @@ $db = [
     ],
 
     'contacts' => [
-        'club_name' => '',
-        'club_address' => '',
-        'work_hours' => '',
+        'club_name' => 'Impuls',
+        'club_address' => 'Gatve adresas namas',
+        'work_hours' => '8-22',
     ],
 
 
