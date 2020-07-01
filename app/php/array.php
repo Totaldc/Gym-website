@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 $db = [
     'menu' => [
         [
@@ -110,15 +107,91 @@ $db = [
         'price' => '49Eur',
         'summary' => 'Unlimited',
     ],
- 
-    'workouts' =>[
 
-        'workout_title' => 'Zumba',
-        'workout_lenght' => 68,
-        'people_count' => 15,
-        'coach_id' => 1,
-        'weekday' => [1, 3, 4],
-
+    'treneriai' => [
+        [
+            'id' => 1,
+            'vardas' => 'Petras',
+            'pavarde' => 'Petraitis',
+            'stilius' => 'Aerobika',
+            'patirtis' => 5
+        ],
+        [
+            'id' => 2,
+            'vardas' => 'Andriukas',
+            'pavarde' => 'Milikonis',
+            'stilius' => 'Geležis',
+            'patirtis' => 10
+        ],
+        [
+            'id' => 3,
+            'vardas' => 'Mykolas',
+            'pavarde' => 'Brazauskas',
+            'stilius' => 'Šokinėjimas virvute',
+            'patirtis' => 2
+        ],
+        [
+            'id' => 4,
+            'vardas' => 'Laimonas',
+            'pavarde' => 'Sangokauskas',
+            'stilius' => 'Kovų menai',
+            'patirtis' => 7
+        ],
     ],
+    'treniruotes' => [
+        [
+            'id' => 1,
+            'pavadinimas' => 'Joga',
+            'trukme' => 60,
+            'laikas' =>
+                [
+                    1 => ['10:00', '18:00'],
+                    3 => ['12:00', '16:00'],
+                    5 => ['14:00', '19:00']
+            ],
+            'treneris' => 1
+        ],
+        [
+            'id' => 2,
+            'pavadinimas' => 'Pilatesas',
+            'trukme' => 60,
+            'laikas' =>
+                [
+                    1 => ['11:00', '20:00'],
+                    4 => ['09:00', '15:00', '19:00'],
+                    5 => ['13:00', '20:00'],
+                    7 => ['09:00']
+                ],
+            'treneris' => 2
+        ],
+        [
+            'id' => 3,
+            'pavadinimas' => 'Boksas',
+            'trukme' => 60,
+            'laikas' =>
+                [
+                    1 => ['14:00', '16:00'],
+                    2 => ['10:00', '14:00'],
+                    3 => ['10:00', '14:00'],
+                    6 => ['09:00', '14:00']
+                ],
+            'treneris' => 4
+        ],
+        [
+            'id' => 4,
+            'pavadinimas' => 'Core X',
+            'trukme' => 120,
+            'laikas' =>
+            [
+                6 => ['11:00']
+            ],
+            'treneris' => 2
+        ]
+    ]
+
 
 ];
+
+
+
+

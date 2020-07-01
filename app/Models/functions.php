@@ -145,7 +145,7 @@ function make_staff_cards($array)
     print '<div class="card-group text-center">';
     foreach ($array['staff'] as $key => $people) {
         print '<div class="card m-3 h-50 col-4" style="border:1px solid black">';
-        print '<img height="200px" src="' . $people['coach_img'] .'">';
+        print '<img height="200px" src="' . $people['coach_img'] . '">';
         print '<div class="card-body">';
         print '<h5 class="card-title">' . $people['coach_name'] . ' ' . $people['coach_lastname']  . '</h5>';
         print '<p class="card-text">' . $people['coatch_bio'] . '</p>';
@@ -157,8 +157,54 @@ function make_staff_cards($array)
 }
 
 
-function make_offer($array){
-    foreach($array['offers'] as $key => $offer){
-       print $offer['offer_title'];
+function make_offer($array)
+{
+    foreach ($array['offers'] as $key => $offer) {
+        print $offer['offer_title'];
+    }
 }
+
+
+function show_grafikas()
+{
+    $grafikas = make_grafikas();
+    $days = [1 => 'Pirmadienis', 'Antradienis', 'Trečiadienis', 'Ketvirtadienis', 'Penktadienis', 'Šeštadienis', 'Sekmadienis'];
+    echo '<div class="row">';
+    for ($i = 1; $i <= 7; $i++) {
+        echo '<div class="col">';
+        ksort($grafikas[$i]);
+        echo '<b>' . $days[$i] . '</b>';
+        foreach ($grafikas[$i] as $laikas => $treniruotes_id) {
+            $result = get_treniruote_info($treniruotes_id);
+            echo '<div class="row">';
+            echo '<div class="col">';
+            echo '<div class="card">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title">' . $laikas . '</h5>';
+            echo '<p class="card-text">' . get_treneris($result['treneris']) . '</p>';
+            echo '<a href="#" class="btn btn-primary">' . $result['pavadinimas'] . '</a>';
+            echo '</div></div></div></div>';
+        }
+        echo '</div>';
+    }
+    echo '</div>';
 }
+
+function make_grafikas()
+{
+    global $db;
+    for ($i = 1; $i <= 7; $i++) {
+        foreach ($db['treniruotes'] as $treniruote) {
+            if (array_key_exists($i, $treniruote['laikas'])) {
+                foreach ($treniruote['laikas'][$i] as $laikas) {
+                    $grafikas[$i][$laikas] = $treniruote['id'];
+                }
+            }
+        }
+    }
+    return $grafikas;
+}
+
+
+    
+// }
